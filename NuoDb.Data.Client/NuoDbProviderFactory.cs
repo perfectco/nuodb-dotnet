@@ -84,7 +84,7 @@ namespace NuoDb.Data.Client
             return new NuoDbParameter();
         }
 
-#if !NETCOREAPP
+#if !NETCOREAPP && !NETSTANDARD
         public override CodeAccessPermission CreatePermission(PermissionState state)
         {
             return null;

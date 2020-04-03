@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>NuoDb.Data.Client</RootNamespace>
+    <AssemblyName>NuoDb.Data.Client</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD;NETSTANDARD2_1;MONO</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+    <DefineConstants>TRACE;RELEASE;NETSTANDARD;NETSTANDARD2_1;MONO</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="EntityFramework\NuoDbConnectionFactory.cs" />
+    <Compile Remove="EntityFramework\NuoDbProviderManifest.cs" />
+    <Compile Remove="EntityFramework\NuoDbProviderServices.cs" />
+    <Compile Remove="EntityFramework\SqlGen\Symbol.cs" />
+    <Compile Remove="EntityFramework\SqlGen\SymbolTable.cs" />
+    <Compile Remove="EntityFramework\SqlGen\SqlGenerator.cs" />
+    <Compile Remove="EntityFramework\SqlGen\DmlSqlGenerator.cs" />
+    <Compile Remove="EntityFramework\SqlGen\ScriptBuilder.cs" />
+    <Compile Remove="EntityFramework\SqlGen\SqlBuilder.cs" />
+    <Compile Remove="EntityFramework\SqlGen\ExpressionTranslator.cs" />
+    <Compile Remove="EntityFramework\SqlGen\JoinSymbol.cs" />
+    <Compile Remove="EntityFramework\SqlGen\SymbolPair.cs" />
+    <Compile Remove="EntityFramework\SqlGen\MetaDataHelpers.cs" />
+    <Compile Remove="EntityFramework\SqlGen\SqlWriter.cs" />
+    <Compile Remove="EntityFramework\SqlGen\SqlSelectStatement.cs" />
+    <Compile Remove="EntityFramework\SqlGen\ISqlFragment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="EntityFramework\StoreSchemaDefinitionVersion3.ssdl" />
+    <None Remove="EntityFramework\StoreSchemaMappingVersion3.msl" />
+    <None Remove="EntityFramework\StoreSchemaMapping.msl" />
+    <None Remove="EntityFramework\StoreSchemaDefinition.ssdl" />
+    <None Remove="EntityFramework\ProviderManifest.xml" />
+  </ItemGroup>
+</Project>
